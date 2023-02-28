@@ -1,0 +1,27 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    box-shadow: 0 0 4px black
+}
+
+
+.container button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(77, 23, 126);
+    color: white;
+    font-weight: 600;
+    padding:5px 10px 5px;
+}
+
+.container button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
