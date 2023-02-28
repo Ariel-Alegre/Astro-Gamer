@@ -14,7 +14,7 @@ export default function Filters({ setOption, setPage }) {
 
     useEffect(() => {
       dispatch(getAllCategories())
-    }, [])
+    }, [dispatch])
 
     function handleOrder(e) {
        dispatch(orderProducts(e.target.value))
