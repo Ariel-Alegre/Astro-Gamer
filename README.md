@@ -1,18 +1,7 @@
-# Backend 
+# Astro-Gamer
 
-### Borrar la base de datos que creamos
-```
-npx sequelize db:drop
-``` 
-### Crear la base de datos
-```
-npx sequelize db:create
-```
-### Migrar modelos creados previamente
-```
-npx sequelize db:migrate
-```
-### Utilizamos todas las seeds
-```
-npx sequelize db:seed:all
-``` 
+Es una app web E-Commerce de computadoras, perifericos y componentes. Vamos a poder agregar al carrito los productos que queremos añadir, registrarse e iniciar sesion, metodo de pago Paypal
+
+ Tecnologias utilizadas: HTML | CSS | JavaScript | React | Redux | Express | Node.js | PostgreSQL | Sequelize | Bootstrap.
+  
+ App Web: https://p-grupal.vercel.app
