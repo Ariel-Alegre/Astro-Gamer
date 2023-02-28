@@ -4,4 +4,4 @@ Es una app web E-Commerce de computadoras, perifericos y componentes. Vamos a po
 
  Tecnologias utilizadas: HTML | CSS | JavaScript | React | Redux | Express | Node.js | PostgreSQL | Sequelize | Bootstrap.
   
- App Web: https://p-grupal.vercel.app
+ App Web: https://astro-gamer.vercel.app/
