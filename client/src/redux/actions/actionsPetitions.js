@@ -6,7 +6,7 @@ const { REACT_APP_SERVER_BACK } = process.env;
 
 export function getAllProducts() {
   return async function (dispatch) {
-    var json = await axios.get(`https://astro-gamer-production.up.railway.app/products`);
+    var json = await axios.get(`${REACT_APP_SERVER_BACK}/products`);
     return dispatch({
       type: "GET_ALL_PRODUCTS",
       payload: json.data.body,
@@ -15,7 +15,7 @@ export function getAllProducts() {
 }
 export function getDetail(id) {
   return async function (dispatch) {
-    const response = await axios.get(`https://astro-gamer-production.up.railway.app/products/${id}`);
+    const response = await axios.get(`${REACT_APP_SERVER_BACK}/products/${id}`);
     return dispatch({
       type: "GET_DETAIL",
       payload: response.data.body,
@@ -26,7 +26,7 @@ export function getDetail(id) {
 export function registerUser(payload) {
   return async function (dispatch) {
     return axios
-      .post(`https://astro-gamer-production.up.railway.app/auth/register`, payload)
+      .post(`${REACT_APP_SERVER_BACK}/auth/register`, payload)
       .then((result) => {
 
         if (result.data.hasOwnProperty("error")) {
@@ -44,7 +44,7 @@ export function registerUser(payload) {
 export function loginUser(payload) {
   return async function (dispatch) {
     return axios
-      .post(`https://astro-gamer-production.up.railway.app/auth/login`, payload)
+      .post(`${REACT_APP_SERVER_BACK}/auth/login`, payload)
       .then((result) => {
         if (result.data.hasOwnProperty("error")) {
           errorAlert(result.data.error);
@@ -62,7 +62,7 @@ export function loginUser(payload) {
 export function postProduct(payload) {
   return async function (dispatch) {
     const response = await axios.post(
-      `https://astro-gamer-production.up.railway.app/products`,
+      `${REACT_APP_SERVER_BACK}/products`,
       payload
     );
     const data = response.data;
@@ -76,7 +76,7 @@ export function postProduct(payload) {
 export function postImage(payload) {
   return async function (dispatch) {
     const response = await axios.post(
-      `https://astro-gamer-production.up.railway.app/upload`,
+      `${REACT_APP_SERVER_BACK}/upload`,
       payload
     );
     const data = response.data;
@@ -110,7 +110,7 @@ export function getUser(userId) {
       });
     }
     return axios
-      .get(`https://astro-gamer-production.up.railway.app/users/${userId}`)
+      .get(`${REACT_APP_SERVER_BACK}/users/${userId}`)
       .then((result) =>
         dispatch({
           type: "GET_ONE_USER",
@@ -124,7 +124,7 @@ export function getUser(userId) {
 export function updateUser(payload) {
   return async function (dispatch) {
     console.log(payload);
-    const response = await axios.put(`https://astro-gamer-production.up.railway.app/users`, payload);
+    const response = await axios.put(`${REACT_APP_SERVER_BACK}/users`, payload);
     const data = response.data.body;
     return dispatch({
       type: "EDIT_USER",
@@ -137,7 +137,7 @@ export const addReview = (payload) => {
   return async function (dispatch) {
     try {
       const response = await axios.post(
-        `https://astro-gamer-production.up.railway.app/reviews`,
+        `${REACT_APP_SERVER_BACK}/reviews`,
         payload
       );
 
