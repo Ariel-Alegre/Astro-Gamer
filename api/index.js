@@ -36,11 +36,11 @@ app.use((err, req, res) => {
 })
 
 
-db.sequelize.sync({force: false}).then(() => {
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Servidor corriendo en http://localhost:${port}`)
 })
-})
+
 
 module.exports = app
