@@ -22,8 +22,8 @@ module.exports = {
           price: 300,
           stock: 4,
           sold: 50,
-          updatedAt: "2022-11-10T20:47:06.072Z",
-          createdAt: "2022-11-10T20:47:06.072Z",
+          updatedAt: "2022-11-10T20:47:06.073Z",
+          createdAt: "2022-11-10T20:47:06.073Z",
           deletedAt: null,
         },
         {
